@@ -1291,6 +1291,32 @@ select:focus-visible {
   color: #aaa4af;
 }
 
+.signup__input[aria-invalid="true"],
+.signup__select[aria-invalid="true"] {
+  border-color: #c33f58;
+}
+
+.signup__checkbox[aria-invalid="true"] {
+  outline: 2px solid #c33f58;
+  outline-offset: 2px;
+}
+
+.signup__error {
+  margin: 4px 0 0;
+  color: #b52e48;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.signup__error:empty {
+  display: none;
+}
+
+.signup__error--terms {
+  margin-top: -10px;
+  margin-bottom: 12px;
+}
+
 .signup__consent {
   display: flex;
   align-items: flex-start;

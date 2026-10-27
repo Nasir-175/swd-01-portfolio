@@ -1,6 +1,6 @@
-const billingOptions = document.querySelectorAll(".billing-option");
-const priceValues = document.querySelectorAll(".price-value");
-const billingLabels = document.querySelectorAll(".billing-label");
+const billingOptions = document.querySelectorAll(".billing-toggle__option");
+const priceValues = document.querySelectorAll(".card__price-value");
+const billingLabels = document.querySelectorAll(".card__billing-label");
 
 billingOptions.forEach((option) => {
   option.addEventListener("click", () => {
@@ -8,7 +8,7 @@ billingOptions.forEach((option) => {
 
     billingOptions.forEach((billingOption) => {
       const isActive = billingOption === option;
-      billingOption.classList.toggle("is-active", isActive);
+      billingOption.classList.toggle("billing-toggle__option--active", isActive);
       billingOption.setAttribute("aria-pressed", String(isActive));
     });
 
@@ -21,7 +21,7 @@ billingOptions.forEach((option) => {
   });
 });
 
-document.querySelectorAll(".faq-question").forEach((question) => {
+document.querySelectorAll(".faq__question").forEach((question) => {
   question.addEventListener("click", () => {
     const isExpanded = question.getAttribute("aria-expanded") === "true";
     const answer = document.getElementById(question.getAttribute("aria-controls"));
